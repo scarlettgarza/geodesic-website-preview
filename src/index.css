@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+/* ── Tiempos Headline (self-hosted) ── */
+@font-face {
+  font-family: 'TiemposHeadline';
+  src: url('/fonts/Tiempos-Headline-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Design System Tokens ── */
+:root {
+  --font-serif: 'TiemposHeadline', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Brand Greens */
+  --green-forest: #2e3a22;
+  --green-olive: #5f6f4a;
+  --green-sage: #8a9b6f;
+  --green-pale-sage: #c2cbb6;
+
+  /* Warm Accents */
+  --terracotta: #a34e28;
+  --gold: #c6a664;
+
+  /* Neutrals */
+  --white: #ffffff;
+  --soft-white: #faf9f7;
+  --ivory: #f4f0e6;
+  --gray-light: #d6d6d6;
+  --gray-medium: #5e5e5e;
+  --gray-dark: #2b2b2b;
+  --dark-brown: #322c29;
+  --charcoal: #1c1c1c;
+  --black: #141414;
+}
+
+/* ── Tailwind Theme ── */
+@theme {
+  --font-serif: 'TiemposHeadline', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --color-forest: #2e3a22;
+  --color-olive: #5f6f4a;
+  --color-sage: #8a9b6f;
+  --color-pale-sage: #c2cbb6;
+  --color-terracotta: #a34e28;
+  --color-gold: #c6a664;
+  --color-soft-white: #faf9f7;
+  --color-ivory: #f4f0e6;
+  --color-dark-brown: #322c29;
+  --color-charcoal: #1c1c1c;
+  --color-deep-black: #141414;
+  --color-gray-mid: #5e5e5e;
+}
+
+/* ── Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--dark-brown);
+  background-color: var(--soft-white);
+  line-height: 1.5;
+  letter-spacing: 0.08px;
+}
+
+::selection {
+  background-color: var(--gold);
+  color: var(--soft-white);
+}
+
+/* ── Button ── */
+.btn-primary {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: var(--gold);
+  color: var(--charcoal);
+  border: 3px solid var(--gold);
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  transition: all 0.2s ease-in-out;
+  box-shadow:
+    1px 1px 0 0 #000,
+    2px 2px 0 0 #000,
+    3px 3px 0 0 #000,
+    4px 4px 0 0 #000,
+    5px 5px 0 0 #000;
+}
+
+.btn-primary:hover {
+  top: 5px;
+  left: 5px;
+  box-shadow: 0 0 0 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-dark);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-medium);
+}
